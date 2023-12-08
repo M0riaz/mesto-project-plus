@@ -30,7 +30,7 @@ export default (req: SessionRequest, res: Response, next: NextFunction) => {
     return handleAuthError(res, ' проблема с токеном');
   }
 
-  req.user = payload; // записываем пейлоуд в объект запроса
+  req.user = payload;
 
   next(); // пропускаем запрос дальше
 };
